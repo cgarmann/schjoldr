@@ -1,22 +1,22 @@
 # Schjoldr
 
-Holdeplassside for **schjoldr.io** — publisert via GitHub Pages.
+Holding page for **schjoldr.io** — published via GitHub Pages.
 
-Siden viser en enkel "under utvikling"-melding inntil det fulle nettstedet er klart.
+The site shows a simple "under construction" message until the full website is ready.
 
-## Filer
+## Files
 
-- `index.html` — holdeplass (single-file, inline CSS)
+- `index.html` — holding page (single-file, inline CSS)
 - `CNAME` — custom domain (schjoldr.io)
 
-## Endre innhold
+## Update content
 
-Rediger `index.html`, commit og push:
+Edit `index.html`, then commit and push:
 
 ```bash
 git add .
-git commit -m "Oppdater holdeplass"
+git commit -m "Update holding page"
 git push
 ```
 
-Endringene blir live på `https://schjoldr.io` i løpet av et par minutter.
+Changes go live on `https://schjoldr.io` within a couple of minutes.

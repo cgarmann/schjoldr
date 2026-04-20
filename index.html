@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Schjoldr — kommer snart</title>
-  <meta name="description" content="Schjoldr — en nettside er under utvikling. Ta kontakt for henvendelser." />
+<<<<<<< HEAD
+  <title>Schjoldr — coming soon</title>
+  <meta name="description" content="Schjoldr — a new site is under construction. Get in touch for inquiries." />
   <meta name="robots" content="noindex" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Schjoldr — kommer snart" />
-  <meta property="og:description" content="En ny nettside er under utvikling." />
+  <meta property="og:title" content="Schjoldr — coming soon" />
+  <meta property="og:description" content="A new site is under construction." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://schjoldr.io" />
+
+  <link rel="icon" type="image/png" href="assets/images/SCHJOLDR_logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/SCHJOLDR_logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,27 +79,21 @@
     }
 
     .logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 14px;
+      justify-content: center;
       margin-bottom: 48px;
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
+      padding: 22px 36px;
+      background: #f3efe6;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px -20px rgba(138, 176, 224, 0.25),
+                  0 0 0 1px rgba(255, 255, 255, 0.04);
     }
 
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      background: var(--accent-grad);
-      border-radius: 10px;
-      color: #0a0d14;
-      font-weight: 900;
-      font-size: 1.4rem;
-      box-shadow: 0 8px 32px -8px rgba(138, 176, 224, 0.45);
+    .logo img {
+      display: block;
+      height: 42px;
+      width: auto;
     }
 
     .eyebrow {
@@ -207,34 +205,21 @@
 <body>
   <main class="wrap">
     <div class="logo">
-      <span class="logo-mark">S</span>
-      SCHJOLDR
+      <img src="assets/images/SCHJOLDR_logo.png" alt="Schjoldr" />
     </div>
 
     <div class="eyebrow">
       <span class="dot"></span>
-      Under utvikling
+      Under construction
     </div>
 
-    <h1>En ny side er <span class="gradient">på vei opp</span>.</h1>
+    <h1>A new site is <span class="gradient">on the way</span>.</h1>
 
     <p class="lead">
-      Vi bygger noe solid. Kom tilbake om en stund, eller ta kontakt
-      direkte for henvendelser.
+      We're building something solid. Check back soon, or reach out
+      directly for inquiries.
     </p>
 
     <a class="contact" href="mailto:post@schjoldr.io">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="5" width="18" height="14" rx="2"/>
-        <path d="M3 7l9 6 9-6"/>
-      </svg>
-      post@schjoldr.io
-    </a>
-  </main>
-
-  <div class="footer">
-    <span>© 2026 SCHJOLDR</span>
-    <span class="runic">ᛋᚲᛁᛟᛚᛞᚱ</span>
-  </div>
-</body>
-</html>
+        <rect x="3" y="5" width="18" heig
