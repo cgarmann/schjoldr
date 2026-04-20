@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Schjoldr</title>
+  <meta name="description" content="Ta kontakt med Schjoldr for utvikling, rådgivning eller bare en prat om tekniske muligheter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        SCHJOLDR
+      </a>
+      <button class="nav-toggle" aria-label="Meny" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="om.html">Om</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="portefolje.html">Portefølje</a></li>
+        <li><a href="kontakt.html" class="nav-cta active">Ta kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <span class="eyebrow">Kontakt</span>
+      <h1>La oss <span class="gradient-text">ta en prat</span></h1>
+      <p class="hero-lead">
+        Fortell meg kort om prosjektet eller utfordringen du står overfor, så kommer jeg tilbake
+        til deg innen 24 timer med en ærlig vurdering.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h2>Finn meg her</h2>
+          <p>Jeg svarer alltid. Hvis noe haster, nevn det gjerne i emnelinjen.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="icon">✉</span>
+              <div>
+                <strong>E-post</strong>
+                <a href="mailto:hei@schjoldr.no" style="color: var(--text-soft); font-size: 0.88rem;">hei@schjoldr.no</a>
+              </div>
+            </li>
+            <li>
+              <span class="icon">📞</span>
+              <div>
+                <strong>Telefon</strong>
+                <span>+47 000 00 000</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon">📍</span>
+              <div>
+                <strong>Basert i</strong>
+                <span>Oslo, Norge — jobber remote for kunder over hele verden</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon">⏱</span>
+              <div>
+                <strong>Responstid</strong>
+                <span>Innen 24 timer, hverdager</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="margin-top: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;">
+            <h4 style="font-size: 1rem; margin-bottom: 8px;">Ledig kapasitet</h4>
+            <p style="font-size: 0.9rem; color: var(--text-soft); margin: 0;">
+              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00d9ff; margin-right: 8px; box-shadow: 0 0 8px #00d9ff;"></span>
+              Tar imot nye prosjekter fra og med Q3 2026.
+            </p>
+          </div>
+        </div>
+
+        <form class="form" id="kontakt-form" novalidate>
+          <div class="form-row">
+            <div class="field" style="margin-bottom: 0;">
+              <label for="navn">NAVN</label>
+              <input type="text" id="navn" name="navn" required placeholder="Ola Nordmann" />
+            </div>
+            <div class="field" style="margin-bottom: 0;">
+              <label for="e-post">E-POST</label>
+              <input type="email" id="e-post" name="e-post" required placeholder="ola@firma.no" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="firma">FIRMA (VALGFRITT)</label>
+            <input type="text" id="firma" name="firma" placeholder="Firmanavn" />
+          </div>
+
+          <div class="field">
+            <label for="type">HVA GJELDER HENVENDELSEN?</label>
+            <select id="type" name="type">
+              <option value="nytt-prosjekt">Nytt prosjekt</option>
+              <option value="radgivning">Teknisk rådgivning</option>
+              <option value="eksisterende">Hjelp med eksisterende system</option>
+              <option value="annet">Annet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="melding">MELDING</label>
+            <textarea id="melding" name="melding" required placeholder="Fortell meg litt om hva du trenger hjelp til, tidsramme og eventuelt budsjett."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send melding →</button>
+
+          <p id="form-status" style="margin-top: 16px; font-size: 0.9rem; text-align: center; color: var(--text-dim);"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-mark">S</span>
+            SCHJOLDR
+          </a>
+          <p>Norsk IT-utvikler som bygger robust programvare og digitale plattformer.</p>
+        </div>
+        <div>
+          <h5>Navigasjon</h5>
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="om.html">Om</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="portefolje.html">Portefølje</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Tjenester</h5>
+          <ul>
+            <li><a href="tjenester.html">Webutvikling</a></li>
+            <li><a href="tjenester.html">Sky &amp; DevOps</a></li>
+            <li><a href="tjenester.html">API-integrasjon</a></li>
+            <li><a href="tjenester.html">Teknisk rådgivning</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul>
+            <li><a href="mailto:hei@schjoldr.no">hei@schjoldr.no</a></li>
+            <li><a href="kontakt.html">Kontaktskjema</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Schjoldr. Alle rettigheter forbeholdt.</span>
+        <span class="runic">ᛋᚲᛁᛟᛚᛞᚱ</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

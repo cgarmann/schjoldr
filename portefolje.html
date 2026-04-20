@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portefølje — Schjoldr</title>
+  <meta name="description" content="Utvalgte prosjekter og arbeider levert av Schjoldr — web, sky, integrasjon og mer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        SCHJOLDR
+      </a>
+      <button class="nav-toggle" aria-label="Meny" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="om.html">Om</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="portefolje.html" class="active">Portefølje</a></li>
+        <li><a href="kontakt.html" class="nav-cta">Ta kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <span class="eyebrow">Portefølje</span>
+      <h1>Utvalgte <span class="gradient-text">prosjekter</span></h1>
+      <p class="hero-lead">
+        Et knippe arbeider som viser spennet — fra kundevendte plattformer til interne verktøy
+        og skyinfrastruktur. Alle beskrivelser er anonymisert der det er nødvendig.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <article class="project">
+          <div class="project-visual"><span>01</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">AWS</span>
+            </div>
+            <h3>Kundeportal for energiselskap</h3>
+            <p>Full ombygging av selvbetjeningsportal for 150 000 kunder. Sanntidsforbruk, fakturahistorikk og kundeservice-integrasjon.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual"><span>02</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Kubernetes</span>
+            </div>
+            <h3>SaaS-plattform for logistikk</h3>
+            <p>Multi-tenant plattform for planlegging av leveranser. Skalerte fra prototype til 30+ kunder på ett år.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual"><span>03</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LLM</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <h3>AI-assistent for dokumentanalyse</h3>
+            <p>RAG-basert løsning som leser kontrakter og svarer på naturlig språk. Redusert gjennomgangstid med 70 %.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual"><span>04</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Terraform</span>
+              <span class="tag">AWS</span>
+              <span class="tag">DevOps</span>
+            </div>
+            <h3>Skymigrering for B2B-selskap</h3>
+            <p>Migrerte legacy-infrastruktur fra on-prem til AWS med IaC, CI/CD og full observabilitet.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual"><span>05</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Stripe</span>
+            </div>
+            <h3>Mobil betalingsapp</h3>
+            <p>End-to-end utvikling av mobilapp med betaling, lojalitetsprogram og push-varsler. iOS og Android.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-visual"><span>06</span></div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Go</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Data</span>
+            </div>
+            <h3>Hendelsesplattform for sensor-data</h3>
+            <p>Strømming og prosessering av IoT-telemetri i sanntid. Håndterer 50 000+ events per sekund.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Kundesitater -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hva kunder sier</span>
+        <h2>Tilbakemeldinger</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <p style="color: var(--text); font-size: 1.02rem; font-style: italic;">“Leverte over forventning — både teknisk og i kommunikasjon. Nå er koden vår et aktivum i stedet for en belastning.”</p>
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+            <strong style="display: block; font-size: 0.95rem;">Kari Berg</strong>
+            <span style="font-size: 0.85rem; color: var(--text-dim);">CTO, Nordlys Tech</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <p style="color: var(--text); font-size: 1.02rem; font-style: italic;">“Forstod behovene våre på første møte. Det er sjelden å jobbe med noen som virkelig bryr seg om kvaliteten.”</p>
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+            <strong style="display: block; font-size: 0.95rem;">Ola Hansen</strong>
+            <span style="font-size: 0.85rem; color: var(--text-dim);">Produktsjef, Vidda AS</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <p style="color: var(--text); font-size: 1.02rem; font-style: italic;">“Tydelig, strukturert og pålitelig. Anbefales for alle som trenger en senior utvikler de kan stole på.”</p>
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+            <strong style="display: block; font-size: 0.95rem;">Ingrid Solheim</strong>
+            <span style="font-size: 0.85rem; color: var(--text-dim);">Daglig leder, Fossheim Digital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Vil du bli neste referanse?</h2>
+        <p>Fortell meg hva du ønsker å bygge, så tar vi det derfra.</p>
+        <a href="kontakt.html" class="btn btn-primary">Ta kontakt →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-mark">S</span>
+            SCHJOLDR
+          </a>
+          <p>Norsk IT-utvikler som bygger robust programvare og digitale plattformer.</p>
+        </div>
+        <div>
+          <h5>Navigasjon</h5>
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="om.html">Om</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="portefolje.html">Portefølje</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Tjenester</h5>
+          <ul>
+            <li><a href="tjenester.html">Webutvikling</a></li>
+            <li><a href="tjenester.html">Sky &amp; DevOps</a></li>
+            <li><a href="tjenester.html">API-integrasjon</a></li>
+            <li><a href="tjenester.html">Teknisk rådgivning</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul>
+            <li><a href="mailto:hei@schjoldr.no">hei@schjoldr.no</a></li>
+            <li><a href="kontakt.html">Kontaktskjema</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Schjoldr. Alle rettigheter forbeholdt.</span>
+        <span class="runic">ᛋᚲᛁᛟᛚᛞᚱ</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

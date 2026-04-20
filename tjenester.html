@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tjenester — Schjoldr</title>
+  <meta name="description" content="Fullstack utvikling, skyinfrastruktur, API-integrasjon og teknisk rådgivning fra Schjoldr." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        SCHJOLDR
+      </a>
+      <button class="nav-toggle" aria-label="Meny" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="om.html">Om</a></li>
+        <li><a href="tjenester.html" class="active">Tjenester</a></li>
+        <li><a href="portefolje.html">Portefølje</a></li>
+        <li><a href="kontakt.html" class="nav-cta">Ta kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <span class="eyebrow">Tjenester</span>
+      <h1>Teknologi som <span class="gradient-text">leverer verdi</span></h1>
+      <p class="hero-lead">
+        Fra første skisse til produksjonssatt system — jeg tar hånd om den tekniske reisen.
+        Her er noen av områdene jeg jobber mest med.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="container">
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Fullstack webutvikling</h3>
+          <p>Moderne webapplikasjoner bygget for ytelse, tilgjengelighet og fremtidig vekst.</p>
+          <ul>
+            <li>React, Next.js og TypeScript</li>
+            <li>Node.js og serverless backend</li>
+            <li>Designsystem og komponentbiblioteker</li>
+            <li>Responsiv og tilgjengelig UI</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">☁</div>
+          <h3>Sky &amp; DevOps</h3>
+          <p>Skalerbar infrastruktur som er trygg å drifte og enkel å endre.</p>
+          <ul>
+            <li>AWS, Azure og Google Cloud</li>
+            <li>Terraform og Pulumi (IaC)</li>
+            <li>Docker og Kubernetes</li>
+            <li>CI/CD-pipelines og automatisering</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙</div>
+          <h3>API-design &amp; integrasjon</h3>
+          <p>Kobler sammen systemer slik at data flyter riktig sted til riktig tid.</p>
+          <ul>
+            <li>REST og GraphQL</li>
+            <li>Event-driven arkitektur</li>
+            <li>Integrasjon mot tredjeparter</li>
+            <li>OpenAPI-dokumentasjon</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧭</div>
+          <h3>Teknisk rådgivning</h3>
+          <p>Sparring og retning for team som står foran tekniske valg.</p>
+          <ul>
+            <li>Arkitekturgjennomgang</li>
+            <li>Teknologivalg og road map</li>
+            <li>Kode- og sikkerhetsaudit</li>
+            <li>Mentoring av utviklere</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>Automatisering &amp; AI</h3>
+          <p>Bruk av AI og automatisering der det faktisk gir mening.</p>
+          <ul>
+            <li>LLM-integrasjon i produkter</li>
+            <li>Chatbots og smart assistenter</li>
+            <li>Dataflyt og ETL-prosesser</li>
+            <li>Interne verktøy som sparer tid</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Data &amp; dashboards</h3>
+          <p>Fra rådata til beslutningsstøtte — synliggjøring som gir handlingsrom.</p>
+          <ul>
+            <li>Dataplattformer (Postgres, BigQuery)</li>
+            <li>Visualisering og rapportering</li>
+            <li>Hendelsesstrømmer og analyse</li>
+            <li>KPI-målinger for ledere</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arbeidsprosess -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Prosess</span>
+        <h2>Slik jobber vi sammen</h2>
+        <p>Enkelt, transparent og uten overraskelser.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon" style="font-family: var(--font-mono); font-weight: 700; background: transparent; border: 1px dashed var(--border); color: var(--accent);">01</div>
+          <h3>Oppdagelse</h3>
+          <p>Vi går gjennom mål, kontekst og begrensninger. Resultatet er en skriftlig plan og et tydelig estimat.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="font-family: var(--font-mono); font-weight: 700; background: transparent; border: 1px dashed var(--border); color: var(--accent);">02</div>
+          <h3>Bygging</h3>
+          <p>Korte iterasjoner med jevnlige demoer. Du ser fremgang uke for uke og kan justere underveis.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="font-family: var(--font-mono); font-weight: 700; background: transparent; border: 1px dashed var(--border); color: var(--accent);">03</div>
+          <h3>Drift &amp; overlevering</h3>
+          <p>Grundig dokumentasjon, testdekning og kunnskapsoverføring. Vedlikeholdsavtaler ved behov.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Klar til å komme i gang?</h2>
+        <p>Fortell meg om prosjektet ditt — jeg svarer innen 24 timer med en konkret plan.</p>
+        <a href="kontakt.html" class="btn btn-primary">Send en forespørsel →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-mark">S</span>
+            SCHJOLDR
+          </a>
+          <p>Norsk IT-utvikler som bygger robust programvare og digitale plattformer.</p>
+        </div>
+        <div>
+          <h5>Navigasjon</h5>
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="om.html">Om</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="portefolje.html">Portefølje</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Tjenester</h5>
+          <ul>
+            <li><a href="tjenester.html">Webutvikling</a></li>
+            <li><a href="tjenester.html">Sky &amp; DevOps</a></li>
+            <li><a href="tjenester.html">API-integrasjon</a></li>
+            <li><a href="tjenester.html">Teknisk rådgivning</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul>
+            <li><a href="mailto:hei@schjoldr.no">hei@schjoldr.no</a></li>
+            <li><a href="kontakt.html">Kontaktskjema</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Schjoldr. Alle rettigheter forbeholdt.</span>
+        <span class="runic">ᛋᚲᛁᛟᛚᛞᚱ</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
