@@ -98,26 +98,8 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
       color: inherit;
       text-decoration: none;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 54px;
-      height: 54px;
-      padding: 10px;
-      background: var(--panel-strong);
-      border-radius: 8px;
-      box-shadow: 0 18px 42px -28px rgba(255, 255, 255, 0.42);
-    }
-
-    .brand-mark img {
-      display: block;
-      width: 100%;
-      height: auto;
     }
 
     .brand-text {
@@ -369,11 +351,6 @@
     }
 
     @media (max-width: 520px) {
-      .brand-mark {
-        width: 48px;
-        height: 48px;
-      }
-
       .actions {
         display: grid;
         grid-template-columns: 1fr;
@@ -415,9 +392,6 @@
   <div class="page">
     <header>
       <a class="brand" href="https://schjoldr.io" aria-label="Schjoldr forside">
-        <span class="brand-mark">
-          <img src="assets/images/SCHJOLDR_logo.png" alt="" />
-        </span>
         <span class="brand-text">
           <span class="brand-name">SCHJOLDR</span>
           <span class="brand-status">Offisiell nettside</span>
