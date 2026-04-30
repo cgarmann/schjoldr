@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schjoldr</title>
-  <meta name="description" content="Offisiell nettside for Schjoldr. Ta kontakt for henvendelser, se Cisco Learn eller følg GitHub-profilen." />
+  <meta name="description" content="Schjoldr samler arbeid innen systemarkitektur, nettverk og skytjenester." />
   <meta name="robots" content="noindex" />
 
   <meta property="og:title" content="Schjoldr" />
-  <meta property="og:description" content="Offisiell nettside for Schjoldr." />
+  <meta property="og:description" content="Systemarkitektur, nettverk og skytjenester." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://schjoldr.io" />
   <meta property="og:image" content="https://schjoldr.io/assets/images/SCHJOLDR_logo.png" />
@@ -95,6 +95,12 @@
       gap: 18px;
     }
 
+    .header-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .brand {
       display: inline-flex;
       align-items: center;
@@ -137,6 +143,35 @@
       color: var(--text);
       border-color: rgba(138, 176, 224, 0.55);
       background: rgba(138, 176, 224, 0.10);
+    }
+
+    .language-toggle {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .language-toggle button {
+      min-width: 38px;
+      min-height: 32px;
+      padding: 0 10px;
+      color: var(--text-dim);
+      font: 700 0.72rem "JetBrains Mono", monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .language-toggle button[aria-pressed="true"] {
+      color: var(--ink);
+      background: var(--text);
     }
 
     main {
@@ -190,6 +225,34 @@
 
     .highlight {
       color: var(--accent);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero-wordmark {
+      display: block;
+      width: min(100%, 560px);
+      height: auto;
+      overflow: hidden;
+      filter: brightness(0) invert(1);
+      opacity: 0.96;
+    }
+
+    .hero-wordmark img {
+      display: block;
+      width: 113%;
+      max-width: none;
+      height: auto;
     }
 
     .lead {
@@ -262,7 +325,7 @@
     .signal {
       position: relative;
       display: grid;
-      gap: 18px;
+      gap: 4px;
       align-self: center;
       padding: clamp(18px, 3vw, 28px);
       background: var(--panel);
@@ -271,21 +334,6 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(18px);
       overflow: hidden;
-    }
-
-    .signal-logo {
-      display: grid;
-      place-items: center;
-      min-height: 190px;
-      padding: 28px;
-      background: #f3efe6;
-      border-radius: 8px;
-    }
-
-    .signal-logo img {
-      width: min(100%, 360px);
-      height: auto;
-      display: block;
     }
 
     .status-list {
@@ -300,12 +348,12 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 13px 0;
+      padding: 16px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .status-item strong {
-      color: var(--text);
+      color: #f8fafc;
       font-weight: 700;
     }
 
@@ -350,6 +398,11 @@
         flex-direction: column;
       }
 
+      .header-actions {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
       main {
         grid-template-columns: 1fr;
         padding: 36px 0 48px;
@@ -364,10 +417,11 @@
       .actions {
         display: grid;
         grid-template-columns: 1fr;
-        width: calc(100% - 12px);
+        width: min(100%, 330px);
       }
 
       .lead {
+        width: min(100%, 330px);
         font-size: 1rem;
         line-height: 1.58;
       }
@@ -378,16 +432,16 @@
         word-break: normal;
       }
 
+      .hero-wordmark {
+        width: min(100%, 330px);
+      }
+
       .button {
         width: 100%;
       }
 
-      .signal-logo {
-        min-height: 148px;
-      }
-
       .signal {
-        width: calc(100% - 12px);
+        width: min(100%, 330px);
       }
 
       .status-item {
@@ -401,31 +455,41 @@
 <body>
   <div class="page">
     <header>
-      <a class="brand" href="https://schjoldr.io" aria-label="Schjoldr forside">
+      <a class="brand" href="https://schjoldr.io" aria-label="Schjoldr forside" data-i18n-attr="aria-label:homeLabel">
         <span class="brand-text">
           <span class="brand-name">SCHJOLDR</span>
-          <span class="brand-status">Offisiell nettside</span>
+          <span class="brand-status" data-i18n="brandStatus">Systemarkitektur / nettverk / sky</span>
         </span>
       </a>
 
-      <a class="top-link" href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
-        </svg>
-        GitHub
-      </a>
+      <div class="header-actions">
+        <div class="language-toggle" aria-label="Velg språk">
+          <button type="button" data-lang="no" aria-pressed="true">NO</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a class="top-link" href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+          </svg>
+          GitHub
+        </a>
+      </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="title">
-        <p class="eyebrow">Offisiell nettside</p>
-        <h1 id="title">Schjoldr</h1>
-        <p class="lead">
-          En enkel og tydelig inngang til Schjoldr. For henvendelser, samarbeid
-          eller teknisk innsyn kan du ta kontakt direkte, se Cisco Learn eller besøke GitHub-profilen.
+        <p class="eyebrow" data-i18n="eyebrow">Softwareutvikler & systemarkitekt</p>
+        <h1 id="title" class="sr-only">SCHJOLDR</h1>
+        <div class="hero-wordmark" aria-hidden="true">
+          <img src="assets/images/SCHJOLDR_wordmark.png" alt="" />
+        </div>
+        <p class="lead" data-i18n="lead">
+          Schjoldr samler arbeid innen systemarkitektur, nettverk og skytjenester.
+          Ta kontakt for samarbeid, eller utforsk prosjekter på GitHub og Cisco Learn.
         </p>
 
-        <div class="actions" aria-label="Lenker">
+        <div class="actions" aria-label="Lenker" data-i18n-attr="aria-label:linksLabel">
           <a class="button" href="mailto:post@schjoldr.io">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -453,22 +517,18 @@
         </div>
       </section>
 
-      <aside class="signal" aria-label="Schjoldr informasjon">
-        <div class="signal-logo">
-          <img src="assets/images/SCHJOLDR_logo.png" alt="Schjoldr logo" />
-        </div>
-
+      <aside class="signal" aria-label="Kontakt og lenker" data-i18n-attr="aria-label:panelLabel">
         <div class="status-list">
           <div class="status-item">
-            <strong>Kontakt</strong>
+            <strong data-i18n="contactLabel">Kontakt</strong>
             <span class="pill">post@schjoldr.io</span>
           </div>
           <div class="status-item">
-            <strong>Kode</strong>
+            <strong data-i18n="codeLabel">Kode</strong>
             <span class="pill"><a href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">GitHub</a></span>
           </div>
           <div class="status-item">
-            <strong>Nettsted</strong>
+            <strong data-i18n="websiteLabel">Nettsted</strong>
             <span class="pill"><a href="https://ciscolearn.schjoldr.io/" target="_blank" rel="noopener noreferrer">Cisco Learn</a></span>
           </div>
         </div>
@@ -480,5 +540,74 @@
       <span>schjoldr.io</span>
     </footer>
   </div>
+  <script>
+    const translations = {
+      no: {
+        documentTitle: "Schjoldr",
+        metaDescription: "Schjoldr samler arbeid innen systemarkitektur, nettverk og skytjenester.",
+        brandStatus: "Systemarkitektur / nettverk / sky",
+        eyebrow: "Softwareutvikler & systemarkitekt",
+        lead: "Schjoldr samler arbeid innen systemarkitektur, nettverk og skytjenester. Ta kontakt for samarbeid, eller utforsk prosjekter på GitHub og Cisco Learn.",
+        contactLabel: "Kontakt",
+        codeLabel: "Kode",
+        websiteLabel: "Nettsted",
+        linksLabel: "Lenker",
+        languageLabel: "Velg språk",
+        homeLabel: "Schjoldr forside",
+        panelLabel: "Kontakt og lenker"
+      },
+      en: {
+        documentTitle: "Schjoldr",
+        metaDescription: "Schjoldr brings together work in systems architecture, networking, and cloud services.",
+        brandStatus: "Systems architecture / networking / cloud",
+        eyebrow: "Software developer & systems architect",
+        lead: "Schjoldr brings together work in systems architecture, networking, and cloud services. Get in touch for collaboration, or explore projects on GitHub and Cisco Learn.",
+        contactLabel: "Contact",
+        codeLabel: "Code",
+        websiteLabel: "Website",
+        linksLabel: "Links",
+        languageLabel: "Choose language",
+        homeLabel: "Schjoldr home",
+        panelLabel: "Contact and links"
+      }
+    };
+
+    const languageButtons = document.querySelectorAll("[data-lang]");
+    const metaDescription = document.querySelector('meta[name="description"]');
+
+    function setLanguage(language) {
+      const selected = translations[language] ? language : "no";
+      const copy = translations[selected];
+
+      document.documentElement.lang = selected;
+      document.title = copy.documentTitle;
+      metaDescription?.setAttribute("content", copy.metaDescription);
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        element.textContent = copy[element.dataset.i18n];
+      });
+
+      document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+        element.dataset.i18nAttr.split(",").forEach((pair) => {
+          const [attribute, key] = pair.split(":");
+          element.setAttribute(attribute, copy[key]);
+        });
+      });
+
+      document.querySelector(".language-toggle")?.setAttribute("aria-label", copy.languageLabel);
+
+      languageButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.lang === selected));
+      });
+
+      localStorage.setItem("schjoldr-language", selected);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem("schjoldr-language") || "no");
+  </script>
 </body>
 </html>
