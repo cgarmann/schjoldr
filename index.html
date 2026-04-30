@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schjoldr</title>
-  <meta name="description" content="Offisiell nettside for Schjoldr. Ta kontakt for henvendelser eller følg prosjektet på GitHub." />
+  <meta name="description" content="Offisiell nettside for Schjoldr. Ta kontakt for henvendelser, se Cisco Learn eller følg GitHub-profilen." />
   <meta name="robots" content="noindex" />
 
   <meta property="og:title" content="Schjoldr" />
@@ -319,6 +319,16 @@
       overflow-wrap: anywhere;
     }
 
+    .pill a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .pill a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     footer {
       color: var(--text-dim);
       font-family: "JetBrains Mono", monospace;
@@ -398,7 +408,7 @@
         </span>
       </a>
 
-      <a class="top-link" href="https://github.com/cgarmann/schjoldr" target="_blank" rel="noopener noreferrer">
+      <a class="top-link" href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
         </svg>
@@ -412,7 +422,7 @@
         <h1 id="title">Schjoldr</h1>
         <p class="lead">
           En enkel og tydelig inngang til Schjoldr. For henvendelser, samarbeid
-          eller teknisk innsyn kan du ta kontakt direkte eller se prosjektet på GitHub.
+          eller teknisk innsyn kan du ta kontakt direkte, se Cisco Learn eller besøke GitHub-profilen.
         </p>
 
         <div class="actions" aria-label="Lenker">
@@ -424,11 +434,20 @@
             post@schjoldr.io
           </a>
 
-          <a class="button secondary" href="https://github.com/cgarmann/schjoldr" target="_blank" rel="noopener noreferrer">
+          <a class="button secondary" href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.1c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.34-1.75-1.34-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
             </svg>
             GitHub
+          </a>
+
+          <a class="button secondary" href="https://ciscolearn.schjoldr.io/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M8 7h9v9" />
+              <path d="M14 17H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4" />
+            </svg>
+            Cisco Learn
           </a>
 
         </div>
@@ -446,7 +465,11 @@
           </div>
           <div class="status-item">
             <strong>Kode</strong>
-            <span class="pill">GitHub</span>
+            <span class="pill"><a href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+          </div>
+          <div class="status-item">
+            <strong>Nettsted</strong>
+            <span class="pill"><a href="https://ciscolearn.schjoldr.io/" target="_blank" rel="noopener noreferrer">Cisco Learn</a></span>
           </div>
         </div>
       </aside>
