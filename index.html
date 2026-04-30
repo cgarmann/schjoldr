@@ -240,17 +240,49 @@
     }
 
     .hero-wordmark {
+      display: inline-flex;
+      align-items: baseline;
+      width: fit-content;
+      max-width: 100%;
+      color: #f7f8fa;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: clamp(4.2rem, 8vw, 6.3rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .hero-wordmark .hj {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-wordmark .hj::after {
+      content: "";
+      position: absolute;
+      left: 0.84em;
+      top: 0.22em;
+      width: 0.12em;
+      height: 0.6em;
+      background: currentColor;
+      border-radius: 999px;
+      transform: rotate(38deg);
+      transform-origin: top center;
+    }
+
+    .hero-wordmark .j {
+      display: inline-block;
+      margin-left: -0.03em;
+    }
+
+    .hero-wordmark img {
       display: block;
       width: min(100%, 560px);
       height: auto;
       overflow: hidden;
       opacity: 0.96;
-    }
-
-    .hero-wordmark img {
-      display: block;
-      width: 100%;
-      height: auto;
     }
 
     .lead {
@@ -432,6 +464,7 @@
 
       .hero-wordmark {
         width: min(100%, 330px);
+        font-size: clamp(3.15rem, 13vw, 3.9rem);
       }
 
       .button {
@@ -480,7 +513,7 @@
         <p class="eyebrow" data-i18n="eyebrow">CLOUD, AI & CYBERSECURITY</p>
         <h1 id="title" class="sr-only">SCHJOLDR</h1>
         <div class="hero-wordmark" aria-hidden="true">
-          <img src="assets/images/SCHJOLDR_wordmark.svg" alt="" />
+          <span>SC</span><span class="hj">H<span class="j">J</span></span><span>OLDR</span>
         </div>
         <p class="lead" data-i18n="lead">
           Schjoldr bygger digitale løsninger med fokus på cloud, maskinlæring og sikkerhet.
