@@ -306,7 +306,7 @@
     .signal {
       position: relative;
       display: grid;
-      gap: 4px;
+      gap: 18px;
       align-self: center;
       padding: clamp(18px, 3vw, 28px);
       background: var(--panel);
@@ -317,53 +317,48 @@
       overflow: hidden;
     }
 
-    .status-list {
+    .portfolio-header {
       display: grid;
-      gap: 10px;
-      color: var(--text-soft);
-      font-size: 0.94rem;
+      gap: 8px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .status-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 16px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .status-item strong {
+    .portfolio-header h2 {
       color: #f8fafc;
-      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: 0;
     }
 
-    .pill {
-      flex: 0 0 auto;
-      color: var(--green);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      overflow-wrap: anywhere;
-    }
-
-    .pill a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .pill a:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .portfolio-header p {
+      color: var(--text-soft);
+      font-size: 0.96rem;
+      line-height: 1.6;
     }
 
     .app-card {
       display: grid;
       gap: 14px;
-      margin-top: 16px;
-      padding-top: 20px;
+      padding-top: 2px;
+    }
+
+    .app-card + .app-card {
+      margin-top: 6px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 22px;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
     }
 
     .app-card h2 {
@@ -425,6 +420,17 @@
       padding-bottom: 4px;
     }
 
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text-soft);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     @media (max-width: 820px) {
       .page {
         padding: 20px 32px 20px 20px;
@@ -480,11 +486,6 @@
         width: min(100%, 330px);
       }
 
-      .status-item {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 4px;
-      }
     }
   </style>
 </head>
@@ -530,19 +531,14 @@
         </div>
       </section>
 
-      <aside class="signal" aria-label="Kontakt og lenker" data-i18n-attr="aria-label:panelLabel">
-        <div class="status-list">
-          <div class="status-item">
-            <strong data-i18n="contactLabel">Kontakt</strong>
-            <span class="pill">post@schjoldr.io</span>
-          </div>
-          <div class="status-item">
-            <strong data-i18n="codeLabel">Kode</strong>
-            <span class="pill"><a href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">GitHub</a></span>
-          </div>
+      <aside class="signal" aria-label="Portefølje" data-i18n-attr="aria-label:panelLabel">
+        <div class="portfolio-header">
+          <h2 data-i18n="portfolioTitle">Portefølje</h2>
+          <p data-i18n="portfolioDescription">Utvalgte prosjekter og produkter fra Schjoldr.</p>
         </div>
 
         <div class="app-card">
+          <img class="project-image" src="assets/images/netcli-preview.png" alt="NetCLI og Cisco Learn forhåndsvisning" data-i18n-attr="alt:netcliImageAlt" />
           <h2 data-i18n="appTitle">NetCLI for Android</h2>
           <p data-i18n="appDescription">
             En mobil app for praktisk CCNA- og nettverkslæring, laget for å gjøre repetisjon og kommandoøving mer tilgjengelig. Tilbakemeldinger finnes i Reddit-tråden.
@@ -572,6 +568,7 @@
         </div>
 
         <div class="app-card">
+          <img class="project-image" src="assets/images/nodaldoc-preview.png" alt="NodalDoc forhåndsvisning" data-i18n-attr="alt:nodalImageAlt" />
           <h2 data-i18n="nodalTitle">NodalDoc</h2>
           <p data-i18n="nodalDescription">
             Et enkelt nettsted for å dele dokumenter sikkert.
@@ -592,7 +589,7 @@
 
     <footer>
       <span>© 2026 SCHJOLDR</span>
-      <span>schjoldr.io</span>
+      <a href="https://github.com/cgarmann" target="_blank" rel="noopener noreferrer">GitHub</a>
     </footer>
   </div>
   <script>
@@ -603,19 +600,21 @@
         brandStatus: "Cloud / AI / sikkerhet",
         eyebrow: "CLOUD, AI & CYBERSECURITY",
         lead: "Schjoldr bygger digitale løsninger med fokus på cloud, maskinlæring og sikkerhet.",
-        contactLabel: "Kontakt",
-        codeLabel: "Kode",
+        portfolioTitle: "Portefølje",
+        portfolioDescription: "Utvalgte prosjekter og produkter fra Schjoldr.",
         appTitle: "NetCLI for Android",
         appDescription: "En mobil app for praktisk CCNA- og nettverkslæring, laget for å gjøre repetisjon og kommandoøving mer tilgjengelig. Tilbakemeldinger finnes i Reddit-tråden.",
+        netcliImageAlt: "NetCLI og Cisco Learn forhåndsvisning",
         redditLink: "Reddit-tråd",
         appLinksLabel: "NetCLI lenker",
         nodalTitle: "NodalDoc",
         nodalDescription: "Et enkelt nettsted for å dele dokumenter sikkert.",
+        nodalImageAlt: "NodalDoc forhåndsvisning",
         nodalLinksLabel: "NodalDoc lenker",
         linksLabel: "Lenker",
         languageLabel: "Velg språk",
         homeLabel: "Schjoldr forside",
-        panelLabel: "Kontakt, lenker og prosjekter"
+        panelLabel: "Portefølje"
       },
       en: {
         documentTitle: "Schjoldr",
@@ -623,19 +622,21 @@
         brandStatus: "Cloud / AI / security",
         eyebrow: "CLOUD, AI & CYBERSECURITY",
         lead: "Schjoldr builds digital solutions with a focus on cloud, machine learning, and security.",
-        contactLabel: "Contact",
-        codeLabel: "Code",
+        portfolioTitle: "Portfolio",
+        portfolioDescription: "Selected projects and products from Schjoldr.",
         appTitle: "NetCLI for Android",
         appDescription: "A mobile app for practical CCNA networking study, built to make review and command practice easier to access. User feedback is available in the Reddit thread.",
+        netcliImageAlt: "NetCLI and Cisco Learn preview",
         redditLink: "Reddit thread",
         appLinksLabel: "NetCLI links",
         nodalTitle: "NodalDoc",
         nodalDescription: "A lightweight site for sharing documents clearly and securely.",
+        nodalImageAlt: "NodalDoc preview",
         nodalLinksLabel: "NodalDoc links",
         linksLabel: "Links",
         languageLabel: "Choose language",
         homeLabel: "Schjoldr home",
-        panelLabel: "Contact, links and projects"
+        panelLabel: "Portfolio"
       }
     };
 
