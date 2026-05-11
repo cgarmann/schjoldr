@@ -379,6 +379,63 @@
       text-underline-offset: 3px;
     }
 
+    .app-card {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .app-card h2 {
+      color: #f8fafc;
+      font-size: 1.05rem;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .app-card p {
+      color: var(--text-soft);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .mini-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.045);
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .mini-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(122, 208, 166, 0.58);
+      background: rgba(122, 208, 166, 0.09);
+    }
+
+    .mini-link svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+    }
+
     footer {
       color: var(--text-dim);
       font-family: "JetBrains Mono", monospace;
@@ -534,6 +591,27 @@
             <span class="pill"><a href="https://ciscolearn.schjoldr.io/" target="_blank" rel="noopener noreferrer">Cisco Learn</a></span>
           </div>
         </div>
+
+        <div class="app-card">
+          <h2 data-i18n="appTitle">NetCLI for Android</h2>
+          <p data-i18n="appDescription">
+            En mobil app for praktisk nettverkslæring, laget for å gjøre repetisjon og kommandoøving mer tilgjengelig. Tilbakemeldinger finnes i Reddit-tråden.
+          </p>
+          <div class="mini-actions" aria-label="NetCLI lenker" data-i18n-attr="aria-label:appLinksLabel">
+            <a class="mini-link" href="https://play.google.com/store/apps/details?id=io.schjoldr.netcli&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M5.31 3.2A1.55 1.55 0 0 0 4 4.73v14.54c0 .54.28 1.03.74 1.31l8.33-8.4L5.31 3.2Zm8.73 7.99 2.19-2.2L6.67 3.51l7.37 7.68Zm2.2 3.82-2.2-2.2-7.37 7.68 9.57-5.48Zm1.15-4.95-2.38 2.4 2.38 2.4 1.78-1.02a1.55 1.55 0 0 0 0-2.76l-1.78-1.02Z" />
+              </svg>
+              Google Play
+            </a>
+            <a class="mini-link" href="https://www.reddit.com/r/ccna/comments/1t78y22/i_wanted_a_better_way_to_study_networking_on_my/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22 12.1a2.7 2.7 0 0 0-4.58-1.94 13.12 13.12 0 0 0-4.33-1.1l.73-3.44 2.39.51a2.1 2.1 0 1 0 .3-1.42l-3.09-.66a.74.74 0 0 0-.88.57l-.94 4.42a13.33 13.33 0 0 0-4.98 1.1A2.7 2.7 0 1 0 3.65 14.5c-.03.18-.05.37-.05.56 0 3.31 3.76 6 8.4 6s8.4-2.69 8.4-6c0-.19-.02-.38-.05-.56A2.7 2.7 0 0 0 22 12.1ZM7.86 14.1a1.38 1.38 0 1 1 0-2.76 1.38 1.38 0 0 1 0 2.76Zm7.36 3.85c-.92.92-2.69.99-3.22.99s-2.3-.07-3.22-.99a.74.74 0 1 1 1.05-1.05c.42.42 1.47.56 2.17.56s1.75-.14 2.17-.56a.74.74 0 0 1 1.05 1.05Zm.92-3.85a1.38 1.38 0 1 1 0-2.76 1.38 1.38 0 0 1 0 2.76Z" />
+              </svg>
+              <span data-i18n="redditLink">Reddit-tråd</span>
+            </a>
+          </div>
+        </div>
       </aside>
     </main>
 
@@ -553,10 +631,14 @@
         contactLabel: "Kontakt",
         codeLabel: "Kode",
         websiteLabel: "Nettsted",
+        appTitle: "NetCLI for Android",
+        appDescription: "En mobil app for praktisk nettverkslæring, laget for å gjøre repetisjon og kommandoøving mer tilgjengelig. Tilbakemeldinger finnes i Reddit-tråden.",
+        redditLink: "Reddit-tråd",
+        appLinksLabel: "NetCLI lenker",
         linksLabel: "Lenker",
         languageLabel: "Velg språk",
         homeLabel: "Schjoldr forside",
-        panelLabel: "Kontakt og lenker"
+        panelLabel: "Kontakt, lenker og app"
       },
       en: {
         documentTitle: "Schjoldr",
@@ -567,10 +649,14 @@
         contactLabel: "Contact",
         codeLabel: "Code",
         websiteLabel: "Website",
+        appTitle: "NetCLI for Android",
+        appDescription: "A mobile app for practical networking study, built to make review and command practice easier to access. User feedback is available in the Reddit thread.",
+        redditLink: "Reddit thread",
+        appLinksLabel: "NetCLI links",
         linksLabel: "Links",
         languageLabel: "Choose language",
         homeLabel: "Schjoldr home",
-        panelLabel: "Contact and links"
+        panelLabel: "Contact, links and app"
       }
     };
 
