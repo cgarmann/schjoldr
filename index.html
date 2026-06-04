@@ -84,7 +84,7 @@
       max-width: 1120px;
       margin: 0 auto;
       padding: 28px;
-      overflow: hidden;
+      overflow: visible;
     }
 
     header,
@@ -156,7 +156,7 @@
 
     main {
       display: grid;
-      align-items: center;
+      align-items: start;
       grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.75fr);
       gap: clamp(32px, 6vw, 72px);
       padding: clamp(72px, 12vh, 150px) 0 clamp(56px, 8vh, 100px);
@@ -307,7 +307,7 @@
       position: relative;
       display: grid;
       gap: 18px;
-      align-self: center;
+      align-self: start;
       padding: clamp(18px, 3vw, 28px);
       background: var(--panel);
       border: 1px solid var(--border);
