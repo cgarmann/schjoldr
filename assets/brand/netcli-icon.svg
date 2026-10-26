@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 120 120">
+  <title>NetCLI — appikon med åtte kontakter og terminalprompt</title>
+  <rect width="120" height="120" rx="26" fill="#10B981"/>
+  <g fill="#FFFFFF">
+    <path fill-rule="evenodd" d="M14 28H106V86H78V96H42V86H14ZM20 34V80H48V90H72V80H100V34Z"/>
+    <path d="M22 34H28V44H22ZM32 34H38V44H32ZM42 34H48V44H42ZM52 34H58V44H52ZM62 34H68V44H62ZM72 34H78V44H72ZM82 34H88V44H82ZM92 34H98V44H92Z"/>
+    <path d="M48 49L59 60L48 71" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter"/>
+    <path d="M71 65H83V71H71Z"/>
+  </g>
+</svg>
