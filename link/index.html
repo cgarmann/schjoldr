@@ -13,8 +13,9 @@
   <meta property="og:url" content="https://schjoldr.io/link/" />
   <meta property="og:image" content="https://schjoldr.io/assets/images/netcli-preview.png" />
 
-  <link rel="icon" type="image/png" href="../assets/images/SCHJOLDR_logo.png" />
-  <link rel="apple-touch-icon" href="../assets/images/SCHJOLDR_logo.png" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/brand/icon-180.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -103,11 +104,10 @@
       gap: 2px;
     }
 
-    .brand-name {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.94rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+    .brand-lockup {
+      display: block;
+      width: auto;
+      height: 26px;
     }
 
     .brand-status,
@@ -355,7 +355,7 @@
     <header>
       <a class="brand" href="https://schjoldr.io" aria-label="Schjoldr home">
         <span class="brand-text">
-          <span class="brand-name">SCHJOLDR</span>
+          <img class="brand-lockup" src="../assets/brand/lockup-on-dark.svg" alt="Schjoldr" width="119" height="26" />
           <span class="brand-status">Cloud / AI / security</span>
         </span>
       </a>
