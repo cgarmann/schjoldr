@@ -7,7 +7,7 @@
   <meta name="description" content="Build networks, practice Cisco IOS commands, and troubleshoot hands-on labs. Play The Bloom Protocol and learn with the NetCLI community.">
   <link rel="canonical" href="https://schjoldr.io/netcli/">
   <link rel="icon" href="assets/netcli.png">
-  <link rel="stylesheet" href="style.css?v=terminal-bloom">
+  <link rel="stylesheet" href="style.css?v=plex-console">
   <meta name="theme-color" content="#0d1117">
   <script src="terminal.js" defer></script>
   <meta property="og:type" content="website">
@@ -36,13 +36,8 @@
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span aria-hidden="true">&gt;_</span> Hands-on networking practice</p>
-        <h1 id="hero-title">Build the network.<br><em>Find the fault.</em></h1>
+        <h1 id="hero-title">Build the network. <em>Find the fault.</em></h1>
         <p class="lede">Connect routers, switches, and PCs. Run Cisco IOS commands and see what changes in your network. NetCLI gives you a lab to practice in, right on your phone.</p>
-        <div class="actions" id="download" aria-label="Download NetCLI">
-          <a class="button primary" href="https://apps.apple.com/app/id6770298746">App Store <span aria-hidden="true">↗</span></a>
-          <a class="button outline" href="https://play.google.com/store/apps/details?id=io.schjoldr.netcli">Google Play <span aria-hidden="true">↗</span></a>
-        </div>
-        <a class="text-link" href="#lab">See the lab on mobile <span aria-hidden="true">↓</span></a>
       </div>
       <section class="exercise" aria-labelledby="demo-title">
         <div class="frame-bar"><h2 id="demo-title">R1 / TERMINAL</h2><span>EXAMPLE SESSION</span></div>
@@ -61,6 +56,11 @@ Gi0/1       192.168.2.1  <span>administratively down</span>  down</code></pre>
         </div>
         <p class="exercise-note"><code>Gi0/1</code> is disabled. In the lab, enable the interface with <code>no shutdown</code> and ping again.</p>
       </section>
+      <div class="actions hero-actions" id="download" aria-label="Download NetCLI">
+        <a class="button primary" href="https://apps.apple.com/app/id6770298746">App Store <span aria-hidden="true">↗</span></a>
+        <a class="button outline" href="https://play.google.com/store/apps/details?id=io.schjoldr.netcli">Google Play <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#lab">See the lab on mobile <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
     <section class="practice shell" id="lab" aria-labelledby="lab-title">
@@ -86,12 +86,12 @@ Gi0/1       192.168.2.1  <span>administratively down</span>  down</code></pre>
       <div class="shell bloom-grid">
         <div class="bloom-copy">
           <p class="eyebrow">02 / A story in the terminal</p>
-          <h2 id="bloom-title"><img src="assets/bloom-logo.png" width="860" height="478" alt="The Bloom Protocol" loading="lazy"></h2>
-          <p class="bloom-lede">A basement in 2003.<br>A terminal waiting for you.</p>
+          <h2 id="bloom-title">The Bloom Protocol</h2>
+          <p class="bloom-lede">A basement in 2003. A terminal waiting for you.</p>
           <p>The Bloom Protocol is a story you play through Cisco IOS. Explore the network, try a command, and read the output to decide what to do next.</p>
           <p>Stuck? Ask for a hint in the Bloom channel on Discord.</p>
           <div class="actions">
-            <a class="button amber" href="https://discord.com/channels/1563927892025413784/1568258866641371229">Open the Bloom channel <span aria-hidden="true">↗</span></a>
+            <a class="button outline" href="https://discord.com/channels/1563927892025413784/1568258866641371229">Open the Bloom channel <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="https://github.com/Schjoldr/netcli/wiki/The-Bloom-Protocol">Read the Bloom guide <span aria-hidden="true">↗</span></a>
           </div>
           <p class="bloom-note">New to the server? <a href="https://discord.gg/c8bkfMB3N">Join NetCLI on Discord</a>.</p>
