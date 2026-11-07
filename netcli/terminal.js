@@ -2,6 +2,7 @@ const command = document.querySelector('#demo-command');
 const output = document.querySelector('#demo-output');
 const status = document.querySelector('#demo-status');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const mobileDemo = document.querySelector('#mobile-demo');
 
 function playExample() {
   for (const element of [command, output]) {
@@ -35,3 +36,12 @@ document.querySelector('#copy-demo').addEventListener('click', async () => {
 
 document.querySelector('#demo-actions').hidden = false;
 playExample();
+
+if (!reducedMotion.matches) {
+  mobileDemo.play().catch(() => {
+    // The native controls remain available when autoplay is blocked.
+  });
+}
+reducedMotion.addEventListener('change', event => {
+  if (event.matches) mobileDemo.pause();
+});

@@ -7,9 +7,9 @@
   <meta name="description" content="Build networks, practice Cisco IOS commands, and troubleshoot hands-on labs. Play The Bloom Protocol and learn with the NetCLI community.">
   <link rel="canonical" href="https://schjoldr.io/netcli/">
   <link rel="icon" href="assets/netcli.png">
-  <link rel="stylesheet" href="style.css?v=console-refine">
+  <link rel="stylesheet" href="style.css?v=mobile-demo">
   <meta name="theme-color" content="#0d1117">
-  <script src="terminal.js" defer></script>
+  <script src="terminal.js?v=mobile-demo" defer></script>
   <meta property="og:type" content="website">
   <meta property="og:title" content="NetCLI – Hands-on networking practice">
   <meta property="og:description" content="Build networks in practical labs, play The Bloom Protocol, and learn with other people practicing networking.">
@@ -38,6 +38,7 @@
         <p class="eyebrow"><span aria-hidden="true">&gt;_</span> Hands-on networking practice</p>
         <h1 id="hero-title">Build the network. <em>Find the fault.</em></h1>
         <p class="lede">Connect routers, switches, and PCs. Run Cisco IOS commands and see what changes in your network. NetCLI gives you a lab to practice in, right on your phone.</p>
+        <a class="store-proof" href="https://play.google.com/store/apps/details?id=io.schjoldr.netcli"><strong>5,000+</strong> downloads on Google Play <span aria-hidden="true">↗</span></a>
       </div>
       <section class="exercise" aria-labelledby="demo-title">
         <div class="frame-bar">
@@ -47,18 +48,26 @@
           </div>
           <span>EXAMPLE SESSION</span>
         </div>
-        <div class="terminal-demo">
-          <p class="terminal-command"><span aria-hidden="true">R1#</span> <code id="demo-command">show ip interface brief</code></p>
-          <div id="demo-output" class="terminal-output">
-            <pre tabindex="0" aria-label="Example interface status output"><code>Interface   IP-Address   Status                 Protocol
+        <div class="demo-layout">
+          <div class="terminal-demo">
+            <p class="terminal-command"><span aria-hidden="true">R1#</span> <code id="demo-command">show ip interface brief</code></p>
+            <div id="demo-output" class="terminal-output">
+              <pre tabindex="0" aria-label="Example interface status output"><code>Interface   IP-Address   Status                 Protocol
 Gi0/0       192.168.1.1  up                     up
 Gi0/1       192.168.2.1  <span>administratively down</span>  down</code></pre>
+            </div>
+            <div class="terminal-actions" id="demo-actions" hidden>
+              <button type="button" class="button outline" id="run-demo">Run example</button>
+              <button type="button" class="button outline" id="copy-demo">Copy command</button>
+              <span id="demo-status" role="status"></span>
+            </div>
           </div>
-          <div class="terminal-actions" id="demo-actions" hidden>
-            <button type="button" class="button outline" id="run-demo">Run example</button>
-            <button type="button" class="button outline" id="copy-demo">Copy command</button>
-            <span id="demo-status" role="status"></span>
-          </div>
+          <figure class="mobile-demo">
+            <video id="mobile-demo" width="672" height="720" muted loop playsinline controls preload="none" poster="assets/netcli-no-shutdown.jpg" aria-labelledby="mobile-demo-caption">
+              <source src="assets/netcli-no-shutdown.mp4" type="video/mp4">
+            </video>
+            <figcaption id="mobile-demo-caption">NetCLI on mobile. Run <code>no shutdown</code> and watch the router link turn green.</figcaption>
+          </figure>
         </div>
         <p class="exercise-note"><code>Gi0/1</code> is disabled. In the lab, enable the interface with <code>no shutdown</code> and ping again.</p>
       </section>
