@@ -1,121 +1,126 @@
 <!doctype html>
-<html lang="nb">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NetCLI – Øv på nettverk i terminalen</title>
-  <meta name="description" content="Bygg nettverk, øv på Cisco IOS og feilsøk i praktiske labber. Spill The Bloom Protocol og lær sammen med andre i NetCLI-fellesskapet.">
+  <title>NetCLI – Hands-on networking practice</title>
+  <meta name="description" content="Build networks, practice Cisco IOS commands, and troubleshoot hands-on labs. Play The Bloom Protocol and learn with the NetCLI community.">
   <link rel="canonical" href="https://schjoldr.io/netcli/">
   <link rel="icon" href="assets/netcli.png">
   <link rel="stylesheet" href="style.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NetCLI – Øv på nettverk i terminalen">
-  <meta property="og:description" content="Praktiske nettverkslabber, The Bloom Protocol og et fellesskap å lære sammen med.">
+  <meta property="og:title" content="NetCLI – Hands-on networking practice">
+  <meta property="og:description" content="Build networks in practical labs, play The Bloom Protocol, and learn with other people practicing networking.">
   <meta property="og:url" content="https://schjoldr.io/netcli/">
   <meta property="og:image" content="https://schjoldr.io/netcli/assets/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-  <a class="skip" href="#innhold">Hopp til innhold</a>
+  <a class="skip" href="#content">Skip to content</a>
   <header class="masthead shell">
-    <a class="brand" href="#innhold">
+    <a class="brand" href="#content">
       <img src="assets/netcli.png" width="34" height="34" alt="">
       NetCLI
     </a>
-    <nav aria-label="Hovedmeny">
-      <a href="#labben">Labben</a>
+    <nav aria-label="Main menu">
+      <a href="#lab">The lab</a>
       <a href="#bloom">Bloom</a>
-      <a href="#fellesskap">Fellesskap</a>
+      <a href="#community">Community</a>
     </nav>
-    <a class="header-cta" href="#last-ned">Last ned <span aria-hidden="true">↗</span></a>
+    <a class="header-cta" href="#download">Download <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main id="innhold">
+  <main id="content">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="signal"></span> Praktisk nettverkslæring</p>
-        <h1 id="hero-title">Bygg nettverket.<br><em>Finn feilen.</em></h1>
-        <p class="lede">Koble sammen rutere, svitsjer og PC-er. Bruk Cisco IOS-kommandoer og se hva som skjer i nettverket. NetCLI gir deg en lab å øve i, rett på mobilen.</p>
-        <div class="actions" id="last-ned" aria-label="Last ned NetCLI">
+        <p class="eyebrow"><span class="signal"></span> Hands-on networking practice</p>
+        <h1 id="hero-title">Build the network.<br><em>Find the fault.</em></h1>
+        <p class="lede">Connect routers, switches, and PCs. Run Cisco IOS commands and see what changes in your network. NetCLI gives you a lab to practice in, right on your phone.</p>
+        <div class="actions" id="download" aria-label="Download NetCLI">
           <a class="button primary" href="https://apps.apple.com/app/id6770298746">App Store <span aria-hidden="true">↗</span></a>
           <a class="button outline" href="https://play.google.com/store/apps/details?id=io.schjoldr.netcli">Google Play <span aria-hidden="true">↗</span></a>
         </div>
-        <a class="text-link" href="#labben">Prøv en liten feilsøkingsøvelse <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="#lab">Try a quick troubleshooting exercise <span aria-hidden="true">↓</span></a>
       </div>
-      <figure class="lab-frame">
-        <div class="frame-bar"><span><i></i><i></i><i></i></span><span>NETCLI / MY LAB</span></div>
-        <img src="assets/lab.jpg" width="1440" height="1001" alt="NetCLI-lab med én ruter, én svitsj og tre tilkoblede PC-er">
-        <figcaption><span class="signal"></span> Topologi fra NetCLI</figcaption>
-      </figure>
+      <div class="mobile-shots" aria-label="NetCLI on a phone">
+        <figure class="lab-frame">
+          <img src="assets/mobile-topology.png" width="860" height="1864" alt="NetCLI on a phone showing a router, a switch, and three PCs in My Lab">
+          <figcaption><span class="signal"></span> Network topology</figcaption>
+        </figure>
+        <figure class="lab-frame">
+          <img src="assets/mobile-terminal.png" width="860" height="1864" alt="NetCLI on a phone showing interface status and successful ping results in the router terminal">
+          <figcaption><span class="signal"></span> Cisco IOS terminal</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="practice shell" id="labben" aria-labelledby="lab-title">
+    <section class="practice shell" id="lab" aria-labelledby="lab-title">
       <div>
-        <p class="eyebrow">01 / I labben</p>
-        <h2 id="lab-title">En PC når ikke ruteren.</h2>
-        <p>Du prøver å pinge ruteren, men får ikke svar. Før du endrer IP-adresser eller ruter, sjekk om ruterens grensesnitt er oppe.</p>
-        <p>Øv på samme arbeidsmåte i NetCLI. Undersøk først, gjør én endring og test på nytt.</p>
+        <p class="eyebrow">01 / In the lab</p>
+        <h2 id="lab-title">A PC can’t reach the router.</h2>
+        <p>You ping the router and get no reply. Before changing IP addresses or routes, check whether the router’s interfaces are up.</p>
+        <p>Practice the same process in NetCLI. Inspect the network, make one change, and test again.</p>
       </div>
       <div class="exercise">
-        <div class="frame-bar"><span>R1 / ØVELSE</span><span>EKSEMPEL</span></div>
+        <div class="frame-bar"><span>R1 / EXERCISE</span><span>EXAMPLE</span></div>
         <details>
           <summary><span>R1# <code>show ip interface brief</code></span><span aria-hidden="true">+</span></summary>
           <div class="exercise-answer">
             <pre><code>Interface   IP-Address   Status  Protocol
 Gi0/0       192.168.1.1  up      up
 Gi0/1       192.168.2.1  administratively down  down</code></pre>
-            <p>PC-en er på nettverket bak <code>Gi0/1</code>. <strong>Administratively down</strong> betyr at porten er slått av i konfigurasjonen. Neste steg i labben er å aktivere riktig port med <code>no shutdown</code> og prøve ping på nytt.</p>
+            <p>The PC is on the network behind <code>Gi0/1</code>. <strong>Administratively down</strong> means the interface is disabled in the configuration. In the lab, enable it with <code>no shutdown</code> and try the ping again.</p>
           </div>
         </details>
-        <p class="exercise-note">Åpne kommandoen for å se eksempelutskriften.</p>
+        <p class="exercise-note">Expand the command to see its example output.</p>
       </div>
     </section>
 
     <section class="bloom" id="bloom" aria-labelledby="bloom-title">
       <div class="shell bloom-grid">
         <div class="bloom-copy">
-          <p class="eyebrow">02 / En historie i terminalen</p>
+          <p class="eyebrow">02 / A story in the terminal</p>
           <h2 id="bloom-title"><img src="assets/bloom-logo.png" width="860" height="478" alt="The Bloom Protocol" loading="lazy"></h2>
-          <p class="bloom-lede">En kjeller i 2003.<br>En terminal som venter.</p>
-          <p>The Bloom Protocol er en historie du spiller med Cisco IOS-kommandoer. Undersøk nettverket, prøv en kommando og les svaret før du går videre.</p>
-          <p>Står du fast? Be om et hint i Bloom-kanalen på Discord.</p>
+          <p class="bloom-lede">A basement in 2003.<br>A terminal waiting for you.</p>
+          <p>The Bloom Protocol is a story you play through Cisco IOS. Explore the network, try a command, and read the output to decide what to do next.</p>
+          <p>Stuck? Ask for a hint in the Bloom channel on Discord.</p>
           <div class="actions">
-            <a class="button amber" href="https://discord.com/channels/1563927892025413784/1568258866641371229">Åpne Bloom-kanalen <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/Schjoldr/netcli/wiki/The-Bloom-Protocol">Les Bloom-guiden <span aria-hidden="true">↗</span></a>
+            <a class="button amber" href="https://discord.com/channels/1563927892025413784/1568258866641371229">Open the Bloom channel <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/Schjoldr/netcli/wiki/The-Bloom-Protocol">Read the Bloom guide <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="bloom-note">Ny på serveren? <a href="https://discord.gg/c8bkfMB3N">Bli med på NetCLI Discord</a>.</p>
+          <p class="bloom-note">New to the server? <a href="https://discord.gg/c8bkfMB3N">Join NetCLI on Discord</a>.</p>
         </div>
         <div class="bloom-shots">
           <figure>
-            <img src="assets/bloom-basement.jpg" width="358" height="446" alt="Kjelleren i 2003 med en lysende terminal på arbeidsbenken" loading="lazy">
-            <figcaption>01 / Kjelleren</figcaption>
+            <img src="assets/bloom-basement.jpg" width="358" height="446" alt="The basement in 2003 with a glowing terminal on the workbench" loading="lazy">
+            <figcaption>01 / The basement</figcaption>
           </figure>
           <figure>
-            <img src="assets/bloom-terminal.png" width="402" height="719" alt="Terminalen i prologen med en gul lapp som gir et hint" loading="lazy">
-            <figcaption>02 / Terminalen</figcaption>
+            <img src="assets/bloom-terminal.png" width="402" height="719" alt="The prologue terminal with a yellow hint note" loading="lazy">
+            <figcaption>02 / The terminal</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="community shell" id="fellesskap" aria-labelledby="community-title">
+    <section class="community shell" id="community" aria-labelledby="community-title">
       <div>
-        <p class="eyebrow">03 / Hjelp og fellesskap</p>
-        <h2 id="community-title">Lær sammen med andre.</h2>
-        <p>Del en lab, finn noen å øve med eller forklar en kommando du nettopp fikk til.</p>
+        <p class="eyebrow">03 / Help and community</p>
+        <h2 id="community-title">Learn together.</h2>
+        <p>Share a lab, find someone to practice with, or explain a command that finally clicked.</p>
       </div>
       <ul class="resources">
-        <li><a href="https://discord.gg/c8bkfMB3N"><span><strong>Bli med på Discord</strong><small>Si hei, del en lab og bytt tips.</small></span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="https://github.com/Schjoldr/netcli/discussions/categories/q-a"><span><strong>Still et spørsmål på GitHub</strong><small>Spør om nettverk og hjelp andre med svar.</small></span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="https://github.com/Schjoldr/netcli/wiki"><span><strong>Åpne wikien</strong><small>Finn hurtigstart, øvelser og svar på vanlige spørsmål.</small></span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="https://github.com/Schjoldr/netcli/issues/new/choose"><span><strong>Meld en feil</strong><small>Fortell oss hva som skjedde og hvordan vi kan gjenskape det.</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://discord.gg/c8bkfMB3N"><span><strong>Join Discord</strong><small>Say hello, share a lab, and swap tips.</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/Schjoldr/netcli/discussions/categories/q-a"><span><strong>Ask a question on GitHub</strong><small>Get help with networking or answer another learner’s question.</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/Schjoldr/netcli/wiki"><span><strong>Open the wiki</strong><small>Find the quick start, exercises, and answers to common questions.</small></span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/Schjoldr/netcli/issues/new/choose"><span><strong>Report a bug</strong><small>Tell us what happened and how we can reproduce it.</small></span><span aria-hidden="true">↗</span></a></li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer shell">
-    <a class="brand" href="/"><img src="assets/netcli.png" width="26" height="26" alt=""> NetCLI av Schjoldr</a>
-    <a href="https://github.com/Schjoldr/netcli">NetCLI på GitHub <span aria-hidden="true">↗</span></a>
+    <a class="brand" href="/"><img src="assets/netcli.png" width="26" height="26" alt=""> NetCLI by Schjoldr</a>
+    <a href="https://github.com/Schjoldr/netcli">NetCLI on GitHub <span aria-hidden="true">↗</span></a>
   </footer>
 </body>
 </html>
